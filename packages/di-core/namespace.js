@@ -1,4 +1,4 @@
-Project = {
+DI = {
   Validators: {},
   Schemas: {},
   Namespaces: {},

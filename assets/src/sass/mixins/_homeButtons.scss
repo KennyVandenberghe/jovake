@@ -1,0 +1,24 @@
+$homeButtons_width           : 70px !default;
+$homeButtons_height          : 70px !default;
+$homeButtons_background-color: $color-white !default;
+
+$homeButtons-icon_color    : $color-blue !default;
+$homeButtons-icon_font-size: 1.4em !default;
+$homeButtons-icon_width    : auto !default;
+$homeButtons-icon_left     : calc(50% - 5px) !default;
+
+@mixin homeButtons() {
+  @include flex(1);
+  @include align-self(center);
+  .mdl-button {
+    width           : $homeButtons_width;
+    height          : $homeButtons_height;
+    background-color: $homeButtons_background-color;
+    > i {
+      color    : $homeButtons-icon_color;
+      font-size: $homeButtons-icon_font-size;
+      width    : $homeButtons-icon_width;
+      left     : $homeButtons-icon_left;
+    }
+  }
+}

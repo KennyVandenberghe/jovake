@@ -1,0 +1,22 @@
+$app-layout_max-width: 676px !default;
+$app-layout_margin   : 0 auto !default;
+$app-layout_position : relative !default;
+
+$currency_position : absolute !default;
+$currency_top      : 1em !default;
+$currency_right    : 1em !default;
+$currency_font-size: 1.4em !default;
+$currency_color    : $color-white !default;
+
+.app-layout {
+  max-width: $app-layout_max-width;
+  margin   : $app-layout_margin;
+  position : $app-layout_position;
+  > .currency {
+    position : $currency_position;
+    top      : $currency_top;
+    right    : $currency_right;
+    font-size: $currency_font-size;
+    color    : $currency_color;
+  }
+}

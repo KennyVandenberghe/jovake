@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'project-app',
+  name: 'di-app-ui',
   version: '0.0.1',
   // Brief, one-line summary of the package.
   summary: '',
@@ -16,13 +16,19 @@ Package.onUse(function(api) {
       s = 'server',
       cs = [c, s];
 
-
-//First load Rvn namespace, then app-ui
-  api.imply([
+  api.use([
     'ui',
-    'templating',
-    'project-core',
-    'project-profile',
-    'project-app-ui'
-  ]);
+    'templating'
+  ], c);
+
+  api.use([
+    'di-core'
+  ], cs);
+
+  api.addFiles([
+    'client.js',
+    'components/home.html'
+  ], c);
+
+  api.export('DI');
 });

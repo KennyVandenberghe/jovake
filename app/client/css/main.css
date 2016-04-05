@@ -1,23 +1,79 @@
 ._center {
   text-align: center !important; }
 
-.login-container {
-  position: absolute;
-  text-align: center;
-  margin: auto;
-  top: calc(50% - 185px);
-  left: calc(50% - 185px);
-  padding: 10px;
-  width: 350px;
-  height: 350px;
-  background-color: #fff;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
-  .login-container > .switch {
-    color: #666;
-    text-decoration: underline;
-    display: block; }
-  .login-container > .mdl-button {
-    margin-top: 20px; }
+.app-layout {
+  max-width: 676px;
+  margin: 0 auto;
+  position: relative; }
+  .app-layout > .currency {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    font-size: 1.4em;
+    color: #fff; }
+
+.home-container {
+  background-color: #00B9DA;
+  height: 100vh;
+  text-align: center; }
+  .home-container > .home-title {
+    color: #fff;
+    font-size: 3em;
+    font-weight: 200;
+    margin-bottom: 0.4em;
+    padding-top: 4em; }
+  .home-container > .home-score {
+    color: #fff;
+    font-size: 1.4em; }
+  .home-container > .home-buttons {
+    display: -webkit-flex;
+    display: flex;
+    position: absolute;
+    bottom: 4em;
+    width: 100%;
+    height: 18em; }
+    .home-container > .home-buttons > .buttons-achievements {
+      -webkit-flex: 1;
+      flex: 1;
+      -webkit-align-self: center;
+      align-self: center;
+      text-align: right; }
+      .home-container > .home-buttons > .buttons-achievements .mdl-button {
+        width: 70px;
+        height: 70px;
+        background-color: #fff; }
+        .home-container > .home-buttons > .buttons-achievements .mdl-button > i {
+          color: #00B9DA;
+          font-size: 1.4em;
+          width: auto;
+          left: calc(50% - 5px); }
+    .home-container > .home-buttons > .buttons-play {
+      -webkit-flex: 1;
+      flex: 1; }
+      .home-container > .home-buttons > .buttons-play .mdl-button {
+        background-color: #fff;
+        width: 90px;
+        height: 90px; }
+        .home-container > .home-buttons > .buttons-play .mdl-button > i {
+          color: #00B9DA;
+          font-size: 2em;
+          width: auto;
+          left: calc(50% - 13px); }
+    .home-container > .home-buttons > .buttons-store {
+      -webkit-flex: 1;
+      flex: 1;
+      -webkit-align-self: center;
+      align-self: center;
+      text-align: left; }
+      .home-container > .home-buttons > .buttons-store .mdl-button {
+        width: 70px;
+        height: 70px;
+        background-color: #fff; }
+        .home-container > .home-buttons > .buttons-store .mdl-button > i {
+          color: #00B9DA;
+          font-size: 1.4em;
+          width: auto;
+          left: calc(50% - 5px); }
 
 html {
   font-size: 18px; }

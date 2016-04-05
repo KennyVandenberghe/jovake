@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'project-core',
+  name: 'di-core',
   version: '0.0.1',
   // Brief, one-line summary of the package.
   summary: '',
@@ -19,7 +19,8 @@ Package.onUse(function(api) {
   api.use([
     'ui',
     'templating',
-    'iron:router',
+    'kadira:flow-router',
+    'kadira:blaze-layout',
     'session'
   ], c);
 
@@ -38,5 +39,5 @@ Package.onUse(function(api) {
     'router.js'
   ], c);
 
-  api.export('Project');
+  api.export('DI');
 });

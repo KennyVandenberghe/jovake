@@ -1,10 +1,76 @@
-$message-margin-bottom: 20px !default;
-.page-home {
-  > .message {
-    margin-bottom: $message-margin-bottom;
-    span {
-      display   : block;
-      text-align: center;
+$home-container_background-color: $color-blue !default;
+$home-container_height          : 100vh !default;
+$home-container_text-align      : center !default;
+
+$home-title_color        : $color-white !default;
+$home-title_font-size    : 3em !default;
+$home-title_font-weight  : 200 !default;
+$home-title_margin-bottom: 0.4em !default;
+$home-title_padding-top  : 4em !default;
+
+$home-score_color    : $color-white !default;
+$home-score_font-size: 1.4em !default;
+
+$home-buttons_position: absolute !default;
+$home-buttons_bottom  : 4em !default;
+$home-buttons_width   : 100% !default;
+$home-buttons_height  : 18em !default;
+
+$buttons-achievements_text-align: right !default;
+
+$buttons-play_background-color: $color-white !default;
+$buttons-play_width           : 90px !default;
+$buttons-play_height          : 90px !default;
+
+$buttons-play-icon_color    : $color-blue !default;
+$buttons-play-icon_font-size: 2em !default;
+$buttons-play-icon_width    : auto !default;
+$buttons-play-icon_left     : calc(50% - 13px) !default;
+
+$buttons-store_text-align: left !default;
+
+.home-container {
+  background-color: $home-container_background-color;
+  height          : $home-container_height;
+  text-align      : $home-container_text-align;
+  > .home-title {
+    color        : $home-title_color;
+    font-size    : $home-title_font-size;
+    font-weight  : $home-title_font-weight;
+    margin-bottom: $home-title_margin-bottom;
+    padding-top  : $home-title_padding-top;
+  }
+  > .home-score {
+    color    : $home-score_color;
+    font-size: $home-score_font-size;
+  }
+  > .home-buttons {
+    @include display-flex();
+    position: $home-buttons_position;
+    bottom  : $home-buttons_bottom;
+    width   : $home-buttons_width;
+    height  : $home-buttons_height;
+    > .buttons-achievements {
+      @include homeButtons();
+      text-align: $buttons-achievements_text-align;
+    }
+    > .buttons-play {
+      @include flex(1);
+      .mdl-button {
+        background-color: $buttons-play_background-color;
+        width           : $buttons-play_width;
+        height          : $buttons-play_height;
+        > i {
+          color    : $buttons-play-icon_color;
+          font-size: $buttons-play-icon_font-size;
+          width    : $buttons-play-icon_width;
+          left     : $buttons-play-icon_left;
+        }
+      }
+    }
+    > .buttons-store {
+      @include homeButtons();
+      text-align: $buttons-store_text-align;
     }
   }
 }
