@@ -16,7 +16,7 @@ $home-buttons_bottom  : 4em !default;
 $home-buttons_width   : 100% !default;
 $home-buttons_height  : 18em !default;
 
-$buttons-achievements_text-align: right !default;
+$buttons-leaderboards_text-align: right !default;
 
 $buttons-play_background-color: $color-white !default;
 $buttons-play_width           : 90px !default;
@@ -50,9 +50,9 @@ $buttons-store_text-align: left !default;
     bottom  : $home-buttons_bottom;
     width   : $home-buttons_width;
     height  : $home-buttons_height;
-    > .buttons-achievements {
+    > .buttons-leaderboards {
       @include homeButtons();
-      text-align: $buttons-achievements_text-align;
+      text-align: $buttons-leaderboards_text-align;
     }
     > .buttons-play {
       @include flex(1);

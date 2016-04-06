@@ -19,8 +19,6 @@ Package.onUse(function(api) {
   api.use([
     'ui',
     'templating',
-    'kadira:flow-router',
-    'kadira:blaze-layout',
     'session'
   ], c);
 
@@ -33,10 +31,6 @@ Package.onUse(function(api) {
     'layout.html',
     'layout.js',
     'head.html'
-  ], c);
-
-  api.addFiles([
-    'router.js'
   ], c);
 
   api.export('DI');

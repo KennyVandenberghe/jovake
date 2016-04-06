@@ -18,7 +18,9 @@ Package.onUse(function(api) {
 
   api.use([
     'ui',
-    'templating'
+    'templating',
+    'kadira:flow-router',
+    'kadira:blaze-layout'
   ], c);
 
   api.use([
@@ -27,7 +29,11 @@ Package.onUse(function(api) {
 
   api.addFiles([
     'client.js',
-    'components/home.html'
+    'components/home.html',
+    'components/home.js',
+    'components/store.html',
+    'components/leaderboards.html',
+    'router.js'
   ], c);
 
   api.export('DI');
